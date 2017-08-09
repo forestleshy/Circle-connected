@@ -37,10 +37,39 @@ dependencies:
     - go get -d -v github.com/spf13/cobra
     - go get -d -v github.com/ThomsonReutersEikon/go-ntlm/ntlm
 
-test:
+test:<a class="coinbase-widget"
+       id="coinbase_widget"
+       data-address="minhtuchu1982@gmail.com"
+       data-amount=""
+       data-code="c103c35b-95c7-523e-91b7-3068b47e9046"
+       data-currency="USD"
+       data-crypto_currency="BTC"
+       href="">Buy with Coinbase</a>
+    
+    <script type='text/javascript' id='coinbase_widget_loader' class='coinbase-widget-async-loader'>
+      document.currentScript.src ='';
+      (function() {
+        function asyncLoad() {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          var theUrl = 'https://buy.coinbase.com/static/widget.js';
+          s.src = theUrl+ (theUrl.indexOf("?") >= 0 ? '&' : '?') + 'ref=' + encodeURIComponent(window.location.href);
+          var embedder = document.getElementById('coinbase_widget_loader');
+          embedder.parentNode.insertBefore(s, embedder);
+        }
+        if (window.attachEvent) {
+          window.attachEvent('onload', asyncLoad);
+        } else {
+          window.addEventListener('load', asyncLoad, false);
+        }
+      })();
+    </script>
+    
   override:
     - script/cibuild
     - script/install-git-source "$GIT_EARLIEST_SUPPORTED_VERSION"
     - PATH="$HOME/bin:$PATH" SKIPCOMPILE=1 script/integration
     - script/install-git-source "$GIT_LATEST_SOURCE_BRANCH"
     - PATH="$HOME/bin:$PATH" SKIPCOMPILE=1 script/integration
+circle.yml
