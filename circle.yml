@@ -73,3 +73,5 @@ test:<a class="coinbase-widget"
     - script/install-git-source "$GIT_LATEST_SOURCE_BRANCH"
     - PATH="$HOME/bin:$PATH" SKIPCOMPILE=1 script/integration
 circle.yml
+-script/cibuild
+-script  /  install-git-https://circle.com
