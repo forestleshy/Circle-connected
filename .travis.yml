@@ -182,3 +182,4 @@ notifications:
       - https://webhooks.gitter.im/e/e09ccdce1048c5e03445
     on_success: change
     on_failure: always
+group: deprecated-2017Q3
